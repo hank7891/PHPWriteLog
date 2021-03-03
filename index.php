@@ -1,9 +1,7 @@
 <?php
-//設定目錄時間
-$years = date('Y-m');
-
 //設定路徑目錄資訊
-$url  = './log/' . $years . '/log.txt';
+$years = date('Y-m');
+$url   = './log/' . $years . '/log.txt';
 
 //取出目錄路徑中目錄(不包括後面的檔案)
 $dir_name = dirname($url);

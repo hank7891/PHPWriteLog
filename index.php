@@ -11,11 +11,11 @@ if(!file_exists($dir_name)) {
     mkdir(iconv("UTF-8", "GBK", $dir_name), 0777, true);
 }
 
-//開啟檔案資源通道，不存在則自動建立
-$fp = fopen($url,"a");
-
 // 寫入資訊
 $msg = date('Y-m-d H:i:s');
+
+//開啟檔案資源通道，不存在則自動建立
+$fp = fopen($url,"a");
 
 //寫入檔案
 fwrite($fp,var_export($msg,true)."\r\n");
